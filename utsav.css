@@ -1,0 +1,101 @@
+body{
+    max-width: 960px;
+    font-family: "Source Sans Pro", sans-serif; /* If the first font family isn't found. fall back to sans-serif*/
+    font-size: 12px;
+    margin: auto; /* Center the "960px" body [Tricky! Do some research on "css alignment"]*/
+ 
+}
+.top-bar{
+    padding-left: 10px;
+    padding-top: 4px;
+    height: 50px;
+    background-color: #434333;
+}
+.utsav-name{
+    font-family: "Source Sans Pro ExtraLight", sans-serif;
+    color: white;
+    font-size: 1.8em;
+}
+.utsav-search{
+    float: right;
+}
+.big-box{
+    padding-top: 10px;
+    background-color: #E2E0E0;
+    
+    padding-bottom: 10px;
+
+}
+.big-box img{
+    display: block; /* Required to center image*/
+    margin: 0 auto; 
+}
+.doofus{
+    font-size: 2em;
+    color: gray;
+    display: block;
+    text-align: center;
+}
+/* Taken and modified from my repo*/
+#jquery-toggle-button{
+
+    display: block;
+    font-family: "Source Sans Pro ExtraLight", sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+    width: 160px;
+    height: 40px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #009999;
+    border: 1px solid;
+
+}
+#works{
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#works h1{
+    font-size: 4em;
+    margin: 0;
+    color: gray;
+}
+#works ul{
+    
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+}
+#works li{
+    display: inline;
+    text-align: center;
+    float: left;
+
+}
+/* "Css selectors"  the first and second childs of li (n+1 = first+ second)*/
+/*  https://css-tricks.com/useful-nth-child-recipies/ */
+#works li:nth-child(n+1){ 
+    padding-right: 15%;
+}
+#works img{
+    height: 100px;
+    width: 100px;
+}
+
+
+@media only screen and (max-width: 20em) {
+    body{
+        width: 100%;
+    }
+    #works li{ 
+        padding: 0;
+        margin: 0;
+        display: inline;
+        float: none;
+    }
+
+    }

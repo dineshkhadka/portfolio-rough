@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Utsav's Page</title>
+    <link rel="stylesheet" type="text/css" href="utsav.css">
+
+    <!-- External font [ https://www.google.com/fonts ] 
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200' rel='stylesheet' type='text/css'> 
+    <!-- Causes page to load slow -->
+  
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</head>
+
+<body>
+<div class="top-bar">
+
+<h1 class="utsav-name"> Utsav Shrestha</h1>
+</div>
+
+<div class="big-box">
+
+<img src="download.jpg">
+<span class="doofus">Hi, I'm <strong>Utsav Shrestha</strong>. Part time maniac, full time Psycopath.</span>
+<button id="jquery-toggle-button">
+More about me
+</button>
+
+
+
+</div>
+<div id="works">
+<h1> My works</h1>
+Here are some of my projects I've made thorought my life
+<ul>
+<li> <img src="1.jpg"></li>
+<li> <img src="2.jpg"></li>
+<li> <img src="3.jpg"></li>
+</ul>
+
+</div>
+</body>
+<script type="text/javascript">
+     $(document).ready(function () {
+        $("#jquery-toggle-button").click(
+            function () {
+                $(".doofus").append("<small> <br>I studied in Hogawarts as a lowlife muggle hiding between wizards. I only wanted one thing... to kill Harry Potter!</small>") // This auto removes or adds class hide
+            });
+
+
+    });
+</script>
+</html>
