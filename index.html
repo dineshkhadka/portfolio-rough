@@ -1,61 +1,56 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <head>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<title></title>
+    <title>Utsav's Page</title>
+    <link rel="stylesheet" type="text/css" href="utsav.css">
+
+    <!-- External font [ https://www.google.com/fonts ] 
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200' rel='stylesheet' type='text/css'> 
+    <!-- Causes page to load slow -->
+  
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 </head>
+
 <body>
-	<div class="head1">
-		<h2>
-			<p id="front">UTSAV</p>
-			<p id="back">SHRESTHA</p>
-			<form name="form1" action="javascript:void(0);">
-			<Input id='backk' type="text" name='topBar'></Input></form>
-			<button id='but' type="button" onclick="topB()">Proceed</button>
-		</h2>
+<div class="top-bar">
 
-		
-		<!-- <input id="backk">aboutMe | Contact | Blog</input> -->
-	</div>
-	<div class="img">
-		<img id="img1" src="IMG_20141203_111141.jpg">
-		<h2 id='p0'>Welcome to the present</h2>
-		<p id="p1">Designed By Ajeet Chaulagain. Coded By Utsav Shrestha.</p>
-		<p id="p2">I am going to come up with something original in a few month</strong></p>
-		<div id="p3" onclick="funk()">More about Me!</div>
-	</div>
-	<div class="project"><h2>My Work</h2><br/>
-		<p id="pr0">Here are some projects that I have done so far.</p>
-		<div id="pr1"></div>
-		<div id="pr2"></div>
-		<div id="pr3"></div>
-		<div id="pr4">View Some More Projects</div>
-	</div>
-	<div class="foot">
-		<div id="foot1">&copy 2015. SHRESTSAV</div>
-		<div id="box1"></div>			
-		<div id="box2"></div>
-		<div id="box3"></div>
-		<div id="box4"></div>
-		
-	</div>
+<h1 class="utsav-name"> Utsav Shrestha</h1>
+</div>
 
+<div class="big-box">
+
+<img src="download.jpg">
+<span class="doofus">Hi, I'm <strong>Utsav Shrestha</strong>. Part time maniac, full time Psycopath.</span>
+<button id="jquery-toggle-button">
+More about me
+</button>
+
+
+
+</div>
+<div id="works">
+<h1> My works</h1>
+Here are some of my projects I've made thorought my life
+<ul>
+<li> <img src="1.jpg"></li>
+<li> <img src="2.jpg"></li>
+<li> <img src="3.jpg"></li>
+</ul>
+
+</div>
 </body>
 <script type="text/javascript">
-	function funk(){
-		var ab=document.getElementsByClassName("project");
-		ab[0].classList.toggle("hide");
-	}
-	function topB(){
-		var a=document.form1.topBar.value;
-		document.getElementById("p0").innerHTML='Hello '+a + ' :) Welcome to this page. Try the button below';
-	}
-	var b=document.getElementById("backk");
-	var c=document.getElementById('but');
-	backk.addEventListener("keypress", function() {
-    if (event.keyCode == 13) c.click();
-	}
-	);
-	//b.addEventListener("click",topB);
+     $(document).ready(function () {
+        $("#jquery-toggle-button").click(
+            function () {
+                $(".doofus").append("<small> <br>I studied in Hogawarts as a lowlife muggle hiding between wizards. I only wanted one thing... to kill Harry Potter!</small>") // This auto removes or adds class hide
+            });
+
+
+    });
 </script>
 </html>
