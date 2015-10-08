@@ -5,6 +5,11 @@ body{
     margin: auto; /* Center the "960px" body [Tricky! Do some research on "css alignment"]*/
  
 }
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
 .top-bar{
     padding-left: 10px;
     padding-top: 4px;
@@ -12,6 +17,7 @@ body{
     background-color: #434333;
 }
 .utsav-name{
+    display: inline;
     font-family: "Source Sans Pro ExtraLight", sans-serif;
     color: white;
     font-size: 1.8em;
@@ -63,39 +69,41 @@ body{
     margin: 0;
     color: gray;
 }
-#works ul{
-    
-    list-style-type: none;
+
+.flex-projects{
     display: flex;
+    justify-content: space-around;
+}
+.flex-projects img{
+    width: 200px;
+    height: 150px;
     justify-content: center;
-
 }
-#works li{
-    display: inline;
-    text-align: center;
-    float: left;
 
+.flexbox-menu{
+    padding-top: 10px;
+    display: flex;
+    justify-content:space-around;
 }
+.flexbox-end{
+    color: white;
+    display: flex;
+    justify-content; flex-end;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #434333;
+}
+
 /* "Css selectors"  the first and second childs of li (n+1 = first+ second)*/
 /*  https://css-tricks.com/useful-nth-child-recipies/ */
-#works li:nth-child(n+1){ 
-    padding-right: 15%;
+
+
+/* For screens less than 500px width (Mobile phones)*/
+ @media all and (max-width: 500px) {
+  .flex-projects {
+    /* On small screens, we are no longer using row direction but column */
+    /* Overrides and/or adds to the .flex-projects*/
+    flex-direction: column;
+    justify-content: center;
+  }
 }
-#works img{
-    height: 100px;
-    width: 100px;
-}
-
-
-@media only screen and (max-width: 20em) {
-    body{
-        width: 100%;
-    }
-    #works li{ 
-        padding: 0;
-        margin: 0;
-        display: inline;
-        float: none;
-    }
-
-    }
